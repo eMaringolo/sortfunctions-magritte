@@ -10,17 +10,14 @@ customers sorted: nameDescription ascending, representativeDescription descendin
 "
 Class {
 	#name : #MADescriptionSortFunction,
-	#superclass : #SortFunction,
-	#instVars : [
-		'description'
-	],
+	#superclass : #PropertySortFunction,
 	#category : #'SortFunctions-Magritte'
 }
 
 { #category : #'instance creation' }
-MADescriptionSortFunction class >> for: aDescription [
+MADescriptionSortFunction class >> description: aDescription [
 
-	^self new setDescription: aDescription; yourself
+	^self property: aDescription
 ]
 
 { #category : #'*SortFunctions-Magritte' }
@@ -32,12 +29,5 @@ MADescriptionSortFunction >> collate: objectA with: objectB [
 { #category : #'*SortFunctions-Magritte' }
 MADescriptionSortFunction >> description [
 
-	^description
-]
-
-{ #category : #'*SortFunctions-Magritte' }
-MADescriptionSortFunction >> setDescription: anMADescription [
-	"Private - Sets anMADescription to be used as receiver collator."
-
-	description := anMADescription 
+	^self property
 ]

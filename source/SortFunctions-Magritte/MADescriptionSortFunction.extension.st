@@ -9,12 +9,5 @@ MADescriptionSortFunction >> collate: objectA with: objectB [
 { #category : #'*SortFunctions-Magritte' }
 MADescriptionSortFunction >> description [
 
-	^description
-]
-
-{ #category : #'*SortFunctions-Magritte' }
-MADescriptionSortFunction >> setDescription: anMADescription [
-	"Private - Sets anMADescription to be used as receiver collator."
-
-	description := anMADescription 
+	^self property
 ]

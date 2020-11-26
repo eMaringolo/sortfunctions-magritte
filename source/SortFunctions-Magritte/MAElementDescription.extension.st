@@ -10,7 +10,7 @@ MAElementDescription >> asSortFunction [
 MAElementDescription >> ascending [
 	"Return a SortFunction around the receiver, where the receiver will be used to read the value used for comparison to both a and b during sorting."
 
-	^(MADescriptionSortFunction for: self)
+	^(MADescriptionSortFunction description: self)
 ]
 
 { #category : #'*SortFunctions-Magritte' }
